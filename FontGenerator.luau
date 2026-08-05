@@ -21,7 +21,7 @@ local function getCharData(charCode: number): (CharData)
 		return data;
 	end
 
-	warn(`[{script.Name}]: Unknown character code "{charCode}", falling back to "?"`);
+	warn(`[{script.Name}]: Unknown character code "{charCode}", falling back to "{string.char(FALLBACK_ID)}"`);
 	return FontData[FALLBACK_ID];
 end
 
