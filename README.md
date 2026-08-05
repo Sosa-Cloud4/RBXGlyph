@@ -28,6 +28,7 @@ The renderer reads each character's code, finds its matching glyph data, crops t
 
 This allows fonts that are not available in Roblox to be used inside games, including pixel fonts, stylized UI fonts, and custom game branding fonts.
 
+## Render Options
 | Option | Description |
 |---|---|
 | `Scale` | Sets the glyph scale multiplier |
