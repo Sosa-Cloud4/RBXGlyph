@@ -38,16 +38,19 @@ This allows fonts that are not available in Roblox to be used inside games, incl
 
 ## Example
 ```lua
-local Font = require("@game/ReplicatedStorage/FontGenerator");
+local Font = require("@game/ReplicatedStorage/RBXGlyph");
+
+local someScreenGui = Instance.new("ScreenGui");
+someScreenGui.Parent = game.Players.LocalPlayer.PlayerGui;
 
 local text = Font:Render("Hello World!", {
-    Scale = 2,
-    Color = Color3.fromRGB(255, 255, 255),
-    LineSpacing = 1
+	Scale = 2,
+	Color = Color3.fromRGB(255, 255, 255),
+	LineSpacing = 1
 });
 
 text.Position = UDim2.fromScale(0.5, 0.5);
 text.AnchorPoint = Vector2.new(0.5, 0.5);
 
-text.Parent = game.Players.LocalPlayer.PlayerGui.ScreenGui;
+text.Parent = someScreenGui;
 ```
