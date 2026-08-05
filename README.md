@@ -54,3 +54,5 @@ text.AnchorPoint = Vector2.new(0.5, 0.5);
 
 text.Parent = someScreenGui;
 ```
+
+<img width="1059" height="372" alt="image" src="https://github.com/user-attachments/assets/03c9d77b-692e-433c-b274-c9c2a79a46dd" />
