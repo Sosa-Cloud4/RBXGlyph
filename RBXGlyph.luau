@@ -9,7 +9,7 @@ const LINE_HEIGHT = 75;
 const FALLBACK_ID = 63; -- Example use case: "?"
 
 -- Class
-local FontGenerator = {
+local RBXGlyph = {
 	Image = FONT_IMAGE;
 	SheetSize = SHEET_SIZE;
 	LineHeight = LINE_HEIGHT;
@@ -30,7 +30,7 @@ local function createGlyph(charCode: number, data: CharData, scale: number, colo
 	glyph.Name = string.char(charCode);
 	glyph.BackgroundTransparency = 1;
 	glyph.BorderSizePixel = 0;
-	glyph.Image = FontGenerator.Image;
+	glyph.Image = RBXGlyph.Image;
 	
 	glyph.ImageColor3 = color;
 	glyph.ImageRectOffset = Vector2.new(data.X, data.Y);
@@ -65,14 +65,14 @@ local function measureText(text: string, scale: number, lineSpacing: number): (V
 end
 
 -- Methods
-function FontGenerator.GetTextBounds(self: Public, text: string, options: RenderOptions?): (Vector2)
+function RBXGlyph.GetTextBounds(self: Public, text: string, options: RenderOptions?): (Vector2)
 	local scale = (options and options.Scale) or 1;
 	local lineSpacing = (options and options.LineSpacing) or 1;
 
 	return measureText(text, scale, lineSpacing);
 end
 
-function FontGenerator.Render(self: Public, text: string, options: RenderOptions?): (Frame)
+function RBXGlyph.Render(self: Public, text: string, options: RenderOptions?): (Frame)
 	options = options or {};
 
 	local scale = options.Scale or 1;
@@ -132,4 +132,4 @@ export type Public = {
 
 type Private = Public & {};
 
-return FontGenerator :: Public;
+return RBXGlyph :: Public;
