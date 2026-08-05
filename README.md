@@ -28,6 +28,13 @@ The renderer reads each character's code, finds its matching glyph data, crops t
 
 This allows fonts that are not available in Roblox to be used inside games, including pixel fonts, stylized UI fonts, and custom game branding fonts.
 
+| Option | Description |
+|---|---|
+| `Scale` | Sets the glyph scale multiplier |
+| `Color` | Sets the rendered text color |
+| `LineSpacing` | Sets the spacing between text lines |
+
+
 ## Example
 ```lua
 local Font = require("@game/ReplicatedStorage/FontGenerator");
@@ -43,9 +50,3 @@ text.AnchorPoint = Vector2.new(0.5, 0.5);
 
 text.Parent = game.Players.LocalPlayer.PlayerGui.ScreenGui;
 ```
-
-| Option | Description |
-|---|---|
-| `Scale` | Sets the glyph scale multiplier |
-| `Color` | Sets the rendered text color |
-| `LineSpacing` | Sets the spacing between text lines |
