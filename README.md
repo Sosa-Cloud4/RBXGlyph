@@ -27,3 +27,19 @@ RBXGlyph uses a font atlas containing every character as individual glyphs. Char
 The renderer reads each character's code, finds its matching glyph data, crops the correct section of the PNG using ImageRectOffset and ImageRectSize, then places each glyph together to create fully custom text.
 
 This allows fonts that are not available in Roblox to be used inside games, including pixel fonts, stylized UI fonts, and custom game branding fonts.
+
+## Example
+```lua
+local Font = require("@game/ReplicatedStorage/FontGenerator");
+
+local text = Font:Render("Hello World!", {
+    Scale = 2,
+    Color = Color3.fromRGB(255, 255, 255),
+    LineSpacing = 1
+})
+
+text.Position = UDim2.fromScale(0.5, 0.5);
+text.AnchorPoint = Vector2.new(0.5, 0.5);
+
+text.Parent = game.Players.LocalPlayer.PlayerGui.ScreenGui;
+```
