@@ -36,10 +36,16 @@ local text = Font:Render("Hello World!", {
     Scale = 2,
     Color = Color3.fromRGB(255, 255, 255),
     LineSpacing = 1
-})
+});
 
 text.Position = UDim2.fromScale(0.5, 0.5);
 text.AnchorPoint = Vector2.new(0.5, 0.5);
 
 text.Parent = game.Players.LocalPlayer.PlayerGui.ScreenGui;
 ```
+
+| Option | Description |
+|---|---|
+| `Scale` | Sets the glyph scale multiplier |
+| `Color` | Sets the rendered text color |
+| `LineSpacing` | Sets the spacing between text lines |
